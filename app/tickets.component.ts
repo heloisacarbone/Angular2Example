@@ -1,4 +1,6 @@
 import {Component} from 'angular2/core';
+import {Ticket} from './ticket';
+import {TICKETS} from './mocks';
 
 @Component({
     selector: 'my-tickets',
@@ -6,18 +8,11 @@ import {Component} from 'angular2/core';
 })
 
 export class TicketsComponent {
-    tickets = [
-            {
-                id: 1,
-                name: "Learning how to do",
-                time: "200hs",
-                price: 4.88
-            },
-            {
-                id: 2,
-                name: "Improviments",
-                time: "100hs",
-                price: 12.66
-            }
-    ];
+    tickets: Ticket[];
+
+    /*ngOnInit is invoked after the component is contructed and is the best
+    place to initialize property values*/
+    ngOnInit() {
+        this.tickets = TICKETS;
+    }
 }
