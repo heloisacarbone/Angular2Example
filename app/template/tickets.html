@@ -1,0 +1,14 @@
+<ul>
+    <li *ngFor="#ticket of tickets">
+        <h3>{{ticket.name | uppercase}}</h3>
+        <p>
+            {{ticket.id}}
+        </p>
+        <p>
+            {{ticket.time}}
+        </p>
+        <p>
+            {{ticket.price | currency:'EUR':true}}
+        </p>
+    </li>
+</ul>
