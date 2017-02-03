@@ -1,14 +1,11 @@
-<ul>
-    <li *ngFor="#ticket of tickets">
-        <h3>{{ticket.name | uppercase}}</h3>
-        <p>
-            {{ticket.id}}
-        </p>
-        <p>
-            {{ticket.time}}
-        </p>
-        <p>
-            {{ticket.price | currency:'EUR':true}}
-        </p>
-    </li>
-</ul>
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="card" style="width: 20rem;" *ngFor="#ticket of tickets #idx = index">
+      <div class="card-block">
+        <h4 class="card-title">{{ticket.name | uppercase}}</h4>
+        <p class="card-text">{{ticket.time}} - {{ticket.price | currency:'EUR':true}}</p>
+        <a href="#" class="btn btn-primary">Start</a>
+      </div>
+    </div>
+</div>
+</div>

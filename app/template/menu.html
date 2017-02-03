@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="#">Angular 2 - Helo Example</a>
     </div>
     <ul class="nav navbar-nav">
-        <li *ngFor="#opt of menuOptions" [class.active]="opt.active" (click)="setActiveMenu(opt)">
+        <li *ngFor="#opt of menuOptions" [class.active]="opt.active">
             <a href={{opt.href}}>{{opt.title}}</a>
         </li>
     </ul>
